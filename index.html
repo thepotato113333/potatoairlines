@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Airlines</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+        header {
+            background-color: #FF4500;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #FF4500;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        main {
+            text-align: center;
+            padding: 20px;
+        }
+        footer {
+            background-color: #FF4500;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .btn {
+            background-color: #FF4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        .hidden {
+            display: none;
+        }
+        .destinations, .fleet {
+            list-style: none;
+            padding: 0;
+        }
+        .destinations li, .fleet li {
+            padding: 10px;
+        }
+        .back-btn {
+            margin-top: 20px;
+            background-color: #FF4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+    </style>
+    <script>
+        function showDestinations() {
+            hideAllContent();
+            document.getElementById('destinations-content').classList.remove('hidden');
+        }
+        function showAboutUs() {
+            hideAllContent();
+            document.getElementById('about-content').classList.remove('hidden');
+        }
+        function showContact() {
+            window.location.href = 'https://discord.gg/kxyEAvgV8V';
+        }
+        function showMainContent() {
+            hideAllContent();
+            document.getElementById('main-content').classList.remove('hidden');
+        }
+        function hideAllContent() {
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('destinations-content').classList.add('hidden');
+            document.getElementById('about-content').classList.add('hidden');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Potato Airlines</h1>
+    </header>
+    <nav>
+        <a onclick="showMainContent()">Home</a>
+        <a href="https://www.roblox.com/communities/33125424/PA-Potato-Airlines#!/about">Book Flights</a>
+        <a onclick="showDestinations()">Destinations</a>
+        <a onclick="showAboutUs()">About Us</a>
+        <a onclick="showContact()">Contact</a>
+    </nav>
+    <main>
+        <div id="main-content">
+            <h2>Fly with Potato Airlines on Roblox!</h2>
+            <p>Experience the joy of flying with Potato Airlines in Roblox.</p>
+            <button class="btn" onclick="window.location.href='https://www.roblox.com/communities/33125424/PA-Potato-Airlines#!/about'">Book Now</button>
+        </div>
+        <div id="destinations-content" class="hidden">
+            <h2>Explore Our Destinations</h2>
+            <ul class="destinations">
+                <li>Cardiff</li>
+                <li>East Midlands</li>
+                <li>Dublin</li>
+                <li>Shannon</li>
+                <li>Ireland West Knock</li>
+                <li>Edinburgh</li>
+                <li>Kittila</li>
+            </ul>
+            <button class="back-btn" onclick="showMainContent()">Back</button>
+        </div>
+        <div id="about-content" class="hidden">
+            <h2>About Us</h2>
+            <p>Potato Airlines is a Roblox airline based in Ireland, established September 19, 2023.</p>
+            <h3>Our Fleet</h3>
+            <ul class="fleet">
+                <li>B737-800</li>
+                <li>B737 MAX 8-200</li>
+                <li>ATR72</li>
+                <li>E195</li>
+                <li>E190</li>
+                <li>A320</li>
+                <li>A321</li>
+                <li>A350</li>
+            </ul>
+            <button class="back-btn" onclick="showMainContent()">Back</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Potato Airlines. All rights reserved.</p>
+    </footer>
+</body>
+</html>
